@@ -1,4 +1,4 @@
-FROM centos
+FROM bmc/brpm:v1.0.0
 MAINTAINER Niek Bartholomeus "niek.bartholomeus@gmail.com"
 
 RUN yum install -y postgresql-server postgresql
