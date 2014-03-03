@@ -20,4 +20,7 @@ admin
 $ADMIN_PASSWORD
 $ADMIN_PASSWORD
 InputValues
+
+su postgres sh -c "psql -d brpm26 -c \"update users set first_time_login = 'f'\""
+
 service postgresql stop
