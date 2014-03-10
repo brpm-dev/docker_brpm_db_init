@@ -13,9 +13,7 @@ cd /usr/share/tomcat6/webapps/brpm/WEB-INF
 export BUNDLE_GEMFILE=Gemfile
 export GEM_HOME=gems
 export RAILS_ENV=production
-java -classpath "lib/*" org.jruby.Main -S rake --verbose --trace app:setup:smartrelease_no_drop
-java -classpath "lib/*" org.jruby.Main -S rake --verbose --trace db:migrate
-java -classpath "lib/*" org.jruby.Main -S rake --verbose --trace app:reset_password <<InputValues
+java -classpath "lib/*" org.jruby.Main -S rake --verbose --trace app:setup:smartrelease_no_drop db:migrate app:reset_password <<InputValues
 admin
 $ADMIN_PASSWORD
 $ADMIN_PASSWORD
