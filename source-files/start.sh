@@ -5,7 +5,7 @@ if [ "$(ls -A /data)" ]; then
     rm -rf /data/*
   else
     echo "Data directory is not empty, leaving it as it is."
-    exit 1
+    exit
   fi
 fi
 
